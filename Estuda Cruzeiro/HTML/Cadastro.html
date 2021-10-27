@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/78a27874b4.js" crossorigin="anonymous"></script>
+    <!--Progress Bar-->
+    <script src="/Bootstrap/Estuda Cruzeiro/js/progressbar.min.js"></script>
+    <!--Paralax-->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <script src="/js/scripts.js"></script>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- CDNJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+    <!--Cadastro-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/Bootstrap/Estuda Cruzeiro/css/styles.css">
+    <link rel="stylesheet" href="/Bootstrap/Estuda Cruzeiro/js/cadastro.js">
+
+    <title>Cadastro de Escolas</title>
+
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: #E60084;">
+            <div class="container">
+                <a class="navbar-brand" href="/Bootstrap/Estuda Cruzeiro/HTML/Inicio.html">
+                    <img id="logo" src="/Bootstrap/Estuda Cruzeiro/img/ProjetoLogo.png" alt="Estuda CRZ">
+                </a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" id="home-menu" href="/Bootstrap/Estuda Cruzeiro/HTML/Inicio.html">Página Inicial</span></a>
+                        <a class="nav-item nav-link" id="cadastro-menu" href="/Bootstrap/Estuda Cruzeiro/HTML/Cadastro.html">Cadastro</a>
+                        <a class="nav-item nav-link" id="contato-menu" href="/Bootstrap/Estuda Cruzeiro/HTML/Contato.html">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- MENU -->
+
+    <br><br>
+    <div id="main-container">
+        <h1>Cadastro de Escolas</h1>
+        <form id="register-form" action="">
+            <div class="full-box">
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="Digite o e-mail para contato" data-min-length="2" data-email-validate>
+            </div>
+            <div class="half-box spacing">
+                <label for="name">Nome:</label>
+                <input type="text" name="name" id="name" placeholder="Digite o nome da instituição" data-required data-min-length="3" data-max-length="16">
+            </div>
+            <div class="half-box">
+                <label for="telefone">Telefone:</label>
+                <input type="text" name="telefone" id="telefone" placeholder="Digite o telefone para contato" data-required data-only-letters>
+            </div>
+            <div class="half-box spacing">
+                <label for="SE">Sistema de Ensino:</label>
+                <input type="text" name="SE" id="SE" placeholder="Informe o nome do sistema da instituição" data-required data-only-letters>
+            </div>
+            <div class="half-box">
+                <label for="modalidade">Modalidade de Ensino:</label>
+                <input type="text" name="modalidade" id="modalidade" placeholder="Informe o maior nível de educação escolar" data-required data-only-letters>
+            </div>
+            <div class="half-box spacing">
+                <label for="localizacao">Localização:</label>
+                <input type="text" name="localizacao" id="localizacao" placeholder="Informe o endereço da instituição" data-required data-only-letters>
+            </div>
+            <div class="half-box">
+                <label for="cep">CEP:</label>
+                <input type="text" name="cep" id="cep" placeholder="Digite o CEP" data-required data-only-letters>
+            </div>
+            <div class="full-box">
+                <input id="btn-submit" type="submit" value="Registrar" onclick="saveFile()">
+            </div>
+        </form>
+    </div><br><br>
+
+    <script>
+        let saveFile = () => {
+
+            const email = document.getElementById('email');
+            const name = document.getElementById('name');
+            const telefone = document.getElementById('telefone');
+            const SE = document.getElementById('SE');
+            const modalidade = document.getElementById('modalidade');
+            const localizacao = document.getElementById('localizacao');
+            const cep = document.getElementById('cep');
+            let data =
+                '\rE-mail: ' + email.value + '\r\n' +
+                'Escola: ' + name.value + '\r\n' +
+                'Sistema de Ensino: ' + SE.value + '\r\n' +
+                'Telefone: ' + telefone.value + '\r\n' +
+                'Modalidade de Ensino: ' + modalidade.value + '\r\n' +
+                'CEP: ' + cep.value;
+
+            const textToBLOB = new Blob([data], {
+                type: 'text/plain'
+            });
+            const sFileName = 'Escola.txt';
+
+            let newLink = document.createElement("a");
+            newLink.download = sFileName;
+
+            if (window.webkitURL != null) {
+                newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+            } else {
+                newLink.href = window.URL.createObjectURL(textToBLOB);
+                newLink.style.display = "none";
+                document.body.appendChild(newLink);
+            }
+
+            newLink.click();
+        }
+    </script>
+
+    <br><br>
+    <footer>
+        <div id="copy-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Desenvolvido por <a target="_blank">Estuda CRZ</a> &copy; 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

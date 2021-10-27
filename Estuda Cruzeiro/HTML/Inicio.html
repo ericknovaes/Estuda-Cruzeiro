@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/78a27874b4.js" crossorigin="anonymous"></script>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- CDNJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <!-- Fonte -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Bootstrap/Estuda Cruzeiro/css/styles2.css">
+    <!-- Scripts (jQuery não pode ser o slim que vem do Boostrap) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
+    <!-- Progress Bar -->
+    <script src="/Bootstrap/Estuda Cruzeiro/js/progressbar.min.js"></script>
+    <!-- Parallax -->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <script src="/Bootstrap/Estuda Cruzeiro/js/scripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Estuda Cruzeiro</title>
+
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="/Bootstrap/Estuda Cruzeiro/HTML/Inicio.html">
+                    <img id="logo" src="/Bootstrap/Estuda Cruzeiro/img/ProjetoLogo.png" alt="Estuda CRZ">
+                </a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" id="home-menu" href="/Bootstrap/Estuda Cruzeiro/HTML/Inicio.html">Página Inicial</a>
+                        <a class="nav-item nav-link" id="cadastro-menu" href="/Bootstrap/Estuda Cruzeiro/HTML/Cadastro.html">Cadastro</a>
+                        <a class="nav-item nav-link" id="contato-menu" href="/Bootstrap/Estuda Cruzeiro/HTML/Contato.html">Contato</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- MENU -->
+
+    <div class="container-fluid bg-dark">
+
+        <!-- SLIDES -->
+        <div id="mainSlider" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+                <li data-target="#mainSlider" data-slide-to="1"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="/Bootstrap/Estuda Cruzeiro/img/cruzeiro2.jpg" class="d-block w-100">
+                    <div class="carousel-caption d-md-block">
+                        <h2>EM BUSCA DA MELHOR ESCOLA PARA VOCÊ EM CRUZEIRO?</h2>
+                            <p>CONTE CONOSCO.</p>
+                            <a href="/Bootstrap/Estuda Cruzeiro/HTML/Contato.html" class="main-btn">Entre em contato</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="/Bootstrap/Estuda Cruzeiro/img/cruzeiro.jpeg" class="d-block w-100">
+                    <div class="carousel-caption d-md-block">
+                        <h2>CASO SEJA UMA INSTUIÇÃO, VENHA DESTACAR ELA CONOSCO</h2>
+                            <p>NOSSA EQUIPE ESTÁ PRONTA PARA TE ATENDER.</p>
+                            <a href="/Bootstrap/Estuda Cruzeiro/HTML/Cadastro.html" class="main-btn">Cadastre-se aqui</a>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a><br>
+            <hr>
+        </div>
+        <!-- SLIDES -->
+
+    </div>
+
+    <!-- SOBRE -->
+    <div id="about-area">
+        <div class="container" style="background-color: #ffffff;"><br>
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="main-title">Sobre</h3>
+                </div>
+                <div class="col-md-6">
+                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="/Bootstrap/Estuda Cruzeiro/img/Crianças.jpg" alt="First slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/Bootstrap/Estuda Cruzeiro/img/Escola.jpg" alt="Second slide">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/Bootstrap/Estuda Cruzeiro/img/adolescentes.jpg" alt="Third slide">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h3 class="about-title">UMA PLATAFORMA QUE PENSA NO FUTURO</h3>
+                    <p>"Educação não transforma o mundo. Educação muda as pessoas. Pessoas transformam o mundo" -Paulo Freire.</p>
+                    <p>Levando em consideração essa frase, nossa plataforma tem como objetivo indicar por meio de dados estátisticos as melhores instituições de educação da cidade.</p>
+                    <p>ESTUDA CRUZEIRO FAZ A DIFERENÇA</p>
+                    <p>Veja outros diferenciais:</p>
+                    <ul id="about-list">
+                        <li><i class="fas fa-check"></i> Fácil visualização</li>
+                        <li><i class="fas fa-check"></i> Confiabilidade</li>
+                        <li><i class="fas fa-check"></i> Melhores opções</li>
+                        <li><i class="fas fa-check"></i> Interação com o cliente</li>
+                        <li><i class="fas fa-check"></i> Sua educação é prioridade</li>
+                    </ul>
+                </div>
+            </div>
+
+            <br>
+            <center>
+                <div>
+                    <embed src="/Bootstrap/Estuda Cruzeiro/video/video.mp4" autostart="false" height="405" width="720" />
+                </div>
+            </center>
+
+        </div>
+    </div>
+    <!-- SOBRE -->
+
+    <!-- Serviços da empresa -->
+    <div id="contact-area">
+        <div class="container" style="background-color: #ffffff;"><br>
+            <div class="row">
+                <div class="col-12">
+                    <h3 class="main-title">Escolas Parceiras</h3>
+                </div>
+                <div class="col-md-4 service-box">
+                    <a href="/Bootstrap/Estuda Cruzeiro/HTML/SESI.html">
+                        <h4>SESI</h4>
+                    </a>
+                    <p>Rua Durvalino de Castro, 501 - Vila Ana Rosa 12705-210</p>
+                </div>
+                <div class="col-md-4 service-box">
+                    <a href="/Bootstrap/Estuda Cruzeiro/HTML/EDUCARTE.html">
+                        <h4>Escola Educarte</h4>
+                    </a>
+                    <p>Rua Capitão Avelino Bastos, 525 - Centro &#160 12701-440</p>
+                </div>
+                <div class="col-md-4 service-box">
+                    <a href="/Bootstrap/Estuda Cruzeiro/HTML/ORBE.html">
+                        <h4>Colégio Orbe</h4>
+                    </a>
+                    <p>Rua Luís Romaneli, 160 - Vila Regina Celia &#160 12705-410</p>
+                </div>
+                <div class="col-md-4 service-box">
+                    <a href="/Bootstrap/Estuda Cruzeiro/HTML/ANGLO.html">
+                        <h4>Anglo Cruzeiro</h4>
+                    </a>
+                    <p>Rua José Norberto Pinto, 496 - Vila Ana Rosa Novaes<br>12705-230</p>
+                </div>
+                <div class="col-md-4 service-box">
+                    <a href="/Bootstrap/Estuda Cruzeiro/HTML/SJ.html">
+                        <h4>Colégio São José</h4>
+                    </a>
+                    <p>Rua Pedro Ribeiro da Silva, 90 - Segundo Retiro da Mantiqueira<br>12710-560</p>
+                </div>
+                <div class="col-md-4 service-box">
+                    <a href="/Bootstrap/Estuda Cruzeiro/HTML/DPEDRO.html">
+                        <h4>Colégio Dom Pedro</h4>
+                    </a>
+                    <p>Rua Dr. Othon Barcellos, 1 - Centro <br>12730-010</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="copy-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Desenvolvido por <a target="_blank">Estuda CRZ</a> &copy; 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

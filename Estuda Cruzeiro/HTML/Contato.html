@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!--FontAwesome-->
+    <script src="https://kit.fontawesome.com/78a27874b4.js" crossorigin="anonymous"></script>
+    <!--Progress Bar-->
+    <script src="/Bootstrap/Estuda Cruzeiro/js/progressbar.min.js"></script>
+    <script src="/Bootstrap/Estuda Cruzeiro/js/scripts.js"></script>
+    <!--Paralax-->
+    <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- CDNJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+    <link rel="stylesheet" href="/Bootstrap/Estuda Cruzeiro/css/stylesServiços.css">
+
+    <title>Contato EC</title>
+
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-warning">
+            <div class="container">
+                <a class="navbar-brand" href="/Bootstrap/Estuda Cruzeiro/HTML/Inicio.html">
+                    <img id="logo" src="/Bootstrap/Estuda Cruzeiro/img/ProjetoLogo.png" alt="Estuda CRZ">
+                </a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" id="home-menu" href="/Bootstrap/Estuda Cruzeiro/HTML/Inicio.html">Página Inicial</span></a>
+                        <a class="nav-item nav-link" id="cadastro-menu" href="/Bootstrap/Estuda Cruzeiro/HTML/Cadastro.html">Cadastro</a>
+                        <a class="nav-item nav-link" id="contato-menu" href="/Bootstrap/Estuda Cruzeiro/HTML/Contato.html">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- MENU -->
+
+    <br>
+    <center>
+        <div>
+            <embed src="/Bootstrap/Estuda Cruzeiro/video/video2.mp4" autostart="false" height="405" width="720" />
+        </div>
+    </center>
+
+    <footer>
+        <br>
+        <div id="contact-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="main-title"> Entre em contato conosco<span class="badge badge-secondary"></span></h1>
+                        <hr type=""><br><br>
+                    </div>
+                    <div class="col-md-6 contact-box">
+                        <i class="fas fa-phone"></i>
+                        <p><span class="contact-tile">Ligue para:</span> (12) 3145-9999</p>
+                        <p><span class="contact-tile">Horários:</span> 8h00min - 18h00min</p>
+                    </div>
+                    <div class="col-md-6 contact-box">
+                        <i class="fas fa-envelope"></i>
+                        <p><span class="contact-tile">Envie um email:</span> contato@estudacrz.com.br</p>
+                    </div>
+                    <div class="col-md-6" id="msg-box">
+                        <p>Ou nos deixe uma mensagem:</p>
+                    </div>
+                    <div class="col-md-6" id="contact-form">
+                        <form action="">
+                            <input type="text" class="form-control" placeholder="E-mail" name="email" id="e-m4il">
+                            <input type="text" class="form-control" placeholder="Assunto" name="subject" id="Assunto">
+                            <textarea class="form-control" rows="3" placeholder="Sua mensagem..." name="message" id="msg"></textarea>
+
+                            <input type="button" id="bt" value="Enviar" onclick="saveFile()" />
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let saveFile = () => {
+
+            const email = document.getElementById('e-m4il');
+            const assunto = document.getElementById('Assunto');
+            const msg = document.getElementById('msg');
+
+            let data =
+                '\rE-mail: ' + email.value + '\r\n' +
+                'Assunto: ' + assunto.value + '\r\n' +
+                'Messagem: ' + msg.value
+
+
+            const textToBLOB = new Blob([data], {
+                type: 'text/plain'
+            });
+            const sFileName = 'Contato.txt';
+
+            let newLink = document.createElement("a");
+            newLink.download = sFileName;
+
+            if (window.webkitURL != null) {
+                newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+            } else {
+                newLink.href = window.URL.createObjectURL(textToBLOB);
+                newLink.style.display = "none";
+                document.body.appendChild(newLink);
+            }
+
+            newLink.click();
+        }
+    </script>
+
+
+    <br>
+    <footer>
+        <div id="copy-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>Desenvolvido por <a target="_blank">Estuda CRZ</a> &copy; 2021</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

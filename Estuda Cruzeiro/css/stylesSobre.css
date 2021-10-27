@@ -1,0 +1,32 @@
+/* Sobre a empresa */
+
+#about-area {
+  background-color: #ffffff;
+}
+
+.main-title {
+  color: #444;
+  font-size: 40px;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 17px;
+  color: #444;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#about-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+#about-list li {
+  line-height: 30px;
+}
+
+#about-list i {
+  color: #65DAF9;
+  margin-right: 15px;
+}
